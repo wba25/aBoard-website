@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        @font-face {
+            font-family: 'rez';
+            src: url('font/REZ.ttf');
+        }
+        
+        .home {
+            height: 595px;
+            width: 100%;
+            /*background-image: url("https://i0.wp.com/ficedu.org/wp-content/uploads/2016/07/Savin-NY-Website-Background-Web.jpg");*/
+        }
+        
+        .btn-acesse {}
+        
+        .btn-acesse li {
+            list-style: none;
+        }
+        
+        .btn-acesse a {
+            padding: 15px 20px;
+            margin: -10px 0 -10px 0;
+            background-color: teal;
+            color: #fff;
+        }
+        
+        .acessibilidade li {
+            margin-right: 15px;
+        }
+        
+        .acessibilidade li a {
+            color: black;
+        }
+        
+        .acessibilidade li a:hover {
+            color: teal;
+            text-decoration: none;
+        }
+        
+        .acessibilidade li a:hover i {
+            color: teal;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .acessibilidade li a i {
+            font-size: 0.9em;
+        }
+        
+        .aboard-imagens {
+            background-color: #bdbdbd;
+        }
+        
+        .aboard-imagens .img-app {
+            position: absolute;
+            height: 37%;
+            top: calc(100% - 300px);
+            left: calc(100% - 400px);
+            z-index: 999;
+        }
+        
+        .aboard-imagens .img-editor {
+            position: absolute;
+            left: calc(100% - 705px);
+            margin-top: 40px;
+        }
+        
+        .aboard-titles {
+            margin-top: 160px;
+            margin-left: 60px;
+            text-align: center;
+            width: 500px;
+        }
+        
+        .aboard-titles h1 {
+            font-weight: lighter;
+        }
+        
+        .aboard-titles h1 span {
+            font-family: rez;
+            font-size: 3.5em;
+            color: teal;
+        }
+        
+        .aboard-titles h3 {
+            margin-top: -40px;
+            font-weight: lighter;
+        }
+        
+        .btn-down {
+            border-radius: 50%;
+        }
+        
+        .go-sobre {}
+        
+        .go-sobre button {
+            position: absolute;
+            bottom: -10px;
+            left: 150px;
+            padding: 13px 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="img/assistive-logo.png" height="50em" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">aBoard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tutoriais_v1.html">Tutoriais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://assistive.cin.ufpe.br/en/blog">Blog</a>
+                </li>
+            </ul>
+
+            <div class="btn-acesse">
+                <div class="">
+                    <a href="#">Acesse</a>
+                </div>
+            </div>
+
+            <ul class="navbar-nav ml-auto acessibilidade">
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Contrate de cores"><i class="fas fa-adjust"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Aumento de fonte"><i class="fas fa-font"></i>+</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Diminuição de fonte"><i class="fas fa-font"></i>-</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Acessibilidade"><i class="fab fa-accessible-icon"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Traduzir"><i class="fas fa-language"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linguagem de sinais"><i class="fas fa-sign-language"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="home">
+            <div class="aboard-titles float-left align-middle">
+                <h1 class=""><span><strong>aBoard</strong></span></h1>
+                <h3 class=""><small>Inovando a maneira de comunicar!</small></h3>
+            </div>
+            <div class="float-right aboard-imagens">
+                <img src="img/aboard-app.png" alt="aBoard app" class="img-app" />
+                <img src="img/aboard-editor.png" class="mx-auto img-editor" alt="aBoard editor" />
+            </div>
+            <div class="go-sobre">
+                <button type="button" class="btn btn-outline-info btn-down">v</button>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">O aBoard (ou em português “Prancha Assistive”) é um aplicativo de Comunicação Aumentativa e Alternativa (CAA) para tablet cujo diferencial é a sua capacidade de dar sugestões que agilizem a produção de frases com sentido. Fruto do projeto de pesquisa ASSISTIVE, o aBoard é voltado para os indivíduos que têm deficiência na comunicação gestual, oral e/ou escrita, sendo possível também utilizá-lo como ferramenta de apoio na educação inclusiva e em terapias, como a PECS.</div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-sm">O aBoard Editor é o sistema Web que permite personalizar o vocabulário do aplicativo aBoard. Dentre as funcionalidades desta ferramenta, destaca-se a sua capacidade de indicar sugestões que agilizem a produção de frases com sentido. Fruto do projeto de pesquisa ASSISTIVE, o aBoard Editor é 100% gratuito e foi financiado com recursos do governo federal (CNPq e CAPES). Vale ressaltar que, ao contrário do aBoard, o aBoard Editor requer conexão de internet para ser utilizado e é voltado para os familiares e/ou cuidadores (profissionais de saúde e de educação) do indivíduo com deficiência na comunicação.</div>
+            <div class="col-sm"></div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-sm">
+                <img src="http://assistive.cin.ufpe.br/user/pages/02.sobre/_assistive/assistive.png" />
+            </div>
+            <div class="col-sm">O Assistive é um Grupo de Pesquisa que visa desenvolver tecnologias inovadoras em Comunicação Aumentativa e Alternativa (CAA). O Grupo foi fundado em Janeiro de 2014 no Centro de Informática (CIn) da Universidade Federal de Pernambuco (UFPE), faz parte do Centro Nacional de Referência em Tecnologia Assistiva (CNRTA) e recebe financiamento do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).</div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

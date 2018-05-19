@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html class="google no-js" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>aBoard</title>
+    <meta content="Introducing Google Allo, a smart messaging app that helps you say more and do more. Express yourself better with stickers, doodles, and HUGE emojis &amp; text." name="description">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,200,300,400|Product+Sans:400,300,200&amp;lang=en" rel="stylesheet">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/main.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            var docElement = document.documentElement;
+            docElement.className = docElement.className.replace(/\bgoogle\b/, "google-js");
+            var svgNS = "http://www.w3.org/2000/svg";
+            window["aimSvgSupport"] = !!document.createElementNS && !!document.createElementNS(svgNS, "svg")["createSVGRect"];
+            docElement.className += window["aimSvgSupport"] ? " aim-svg" : " aim-nosvg";
+            var testElement = docElement;
+            var props = ["flexWrap", "WebkitFlexWrap", "MozFlexWrap", "OFlexWrap", "msFlexWrap", "boxDirection", "WebkitBoxDirection", "MozBoxDirection", "OBoxDirection", "msBoxDirection"];
+            while (props.length > 0 && testElement.style[props.shift()] == undefined);
+            window["aimFlexSupport"] = props.length > 0;
+            docElement.className += window["aimFlexSupport"] ? " aim-flex" : " aim-noflex";
+        })();
+
+    </script>
+    <script>
+        (function() {
+            var f = this;
+
+            function g(a) {
+                return void 0 !== a
+            }
+
+            function h(a) {
+                var b = typeof a;
+                if ("object" == b)
+                    if (a) {
+                        if (a instanceof Array) return "array";
+                        if (a instanceof Object) return b;
+                        var c = Object.prototype.toString.call(a);
+                        if ("[object Window]" == c) return "object";
+                        if ("[object Array]" == c || "number" == typeof a.length && "undefined" != typeof a.splice && "undefined" != typeof a.propertyIsEnumerable && !a.propertyIsEnumerable("splice")) return "array";
+                        if ("[object Function]" == c || "undefined" != typeof a.call && "undefined" != typeof a.propertyIsEnumerable && !a.propertyIsEnumerable("call")) return "function"
+                    } else return "null";
+                else if ("function" == b && "undefined" == typeof a.call) return "object";
+                return b
+            }
+
+            function k(a, b, c) {
+                return a.call.apply(a.bind, arguments)
+            }
+
+            function l(a, b, c) {
+                if (!a) throw Error();
+                if (2 < arguments.length) {
+                    var d = Array.prototype.slice.call(arguments, 2);
+                    return function() {
+                        var c = Array.prototype.slice.call(arguments);
+                        Array.prototype.unshift.apply(c, d);
+                        return a.apply(b, c)
+                    }
+                }
+                return function() {
+                    return a.apply(b, arguments)
+                }
+            }
+
+            function m(a, b, c) {
+                m = Function.prototype.bind && -1 != Function.prototype.bind.toString().indexOf("native code") ? k : l;
+                return m.apply(null, arguments)
+            }
+
+            function n() {
+                var a = p,
+                    b = ["glue", "tracking", "AutoTrack"],
+                    c = f;
+                b[0] in c || !c.execScript || c.execScript("var " + b[0]);
+                for (var d; b.length && (d = b.shift());) !b.length && g(a) ? c[d] = a : c = c[d] ? c[d] : c[d] = {}
+            }
+
+            function q(a, b) {
+                function c() {}
+                c.prototype = b.prototype;
+                a.superClass_ = b.prototype;
+                a.prototype = new c;
+                a.prototype.constructor = a;
+                a.base = function(a, c, J) {
+                    for (var d = Array(arguments.length - 2), e = 2; e < arguments.length; e++) d[e - 2] = arguments[e];
+                    return b.prototype[c].apply(a, d)
+                }
+            };
+
+            function r(a) {
+                if (Error.captureStackTrace) Error.captureStackTrace(this, r);
+                else {
+                    var b = Error().stack;
+                    b && (this.stack = b)
+                }
+                a && (this.message = String(a))
+            }
+            q(r, Error);
+            r.prototype.name = "CustomError";
+
+            function t(a, b) {
+                for (var c = a.split("%s"), d = "", e = Array.prototype.slice.call(arguments, 1); e.length && 1 < c.length;) d += c.shift() + e.shift();
+                return d + c.join("%s")
+            };
+
+            function u(a, b) {
+                b.unshift(a);
+                r.call(this, t.apply(null, b));
+                b.shift()
+            }
+            q(u, r);
+            u.prototype.name = "AssertionError";
+
+            function v(a, b) {
+                throw new u("Failure" + (a ? ": " + a : ""), Array.prototype.slice.call(arguments, 1));
+            };
+
+            function w() {
+                this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ = "";
+                this.STRING_CONST_TYPE_MARKER__GOOG_STRING_SECURITY_PRIVATE_ = x
+            }
+            w.prototype.toString = function() {
+                return "Const{" + this.stringConstValueWithSecurityContract__googStringSecurityPrivate_ + "}"
+            };
+            var x = {};
+
+            function y(a) {
+                var b = new w;
+                b.stringConstValueWithSecurityContract__googStringSecurityPrivate_ = a;
+                return b
+            }
+            y("");
+
+            function z() {
+                this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ = "";
+                this.TRUSTED_RESOURCE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ = A
+            }
+            z.prototype.toString = function() {
+                return "TrustedResourceUrl{" + this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ + "}"
+            };
+
+            function B() {
+                var a = y("//www.google-analytics.com/analytics.js");
+                a instanceof w && a.constructor === w && a.STRING_CONST_TYPE_MARKER__GOOG_STRING_SECURITY_PRIVATE_ === x ? a = a.stringConstValueWithSecurityContract__googStringSecurityPrivate_ : (v("expected object of type Const, got '" + a + "'"), a = "type_error:Const");
+                var b = new z;
+                b.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ = a;
+                return b
+            }
+            var A = {};
+
+            function p(a, b) {
+                if ("string" != typeof a || !C.test(a)) throw "trackingId must be a string";
+                var c;
+                if (c = g(b)) c = typeof b, c = !("object" == c && null != b || "function" == c);
+                if (c) throw "Argument opt_conf must be an object";
+                this.trackingId_ = a;
+                this.conf_ = b || {};
+                this.globalName_ = this.conf_._globalName || "ga";
+                delete this.conf_._globalName;
+                this.trackPageview_ = g(this.conf_._trackPageview) ? this.conf_._trackPageview : !0;
+                delete this.conf_._trackPageview;
+                this.trackLinks_ = g(this.conf_._trackLinks) ? this.conf_._trackLinks : !0;
+                delete this.conf_._trackLinks;
+                this.eventActionFilterFn_ = this.conf_._actionFilter;
+                delete this.conf_._actionFilter;
+                D(this);
+                if (!g(this.conf_.cookiePath)) {
+                    c = this.conf_;
+                    var d = E.match(F);
+                    c.cookiePath = d && d[1] || "/"
+                }
+                this.ga("create", this.trackingId_, this.conf_);
+                g(this.conf_.anonymizeIp) || this.ga("set", "anonymizeIp", !0);
+                g(this.conf_.historyImportTask) || this.ga("set", "historyImportTask", !1);
+                this.trackPageview_ && this.ga("send", "pageview");
+                G(this.enableEventTracking, this)
+            }
+            n();
+            var C = /^(UA|YT|MO|GP)-(\d+)-(\d+)$/,
+                E = location.pathname,
+                F = /^(\/([^;,\/]*\/)?)/;
+
+            function D(a) {
+                var b = a.globalName_;
+                a = document.createElement("script");
+                var c = document.getElementsByTagName("script")[0];
+                window.GoogleAnalyticsObject = b;
+                window[b] = window[b] || function() {
+                    (window[b].q = window[b].q || []).push(arguments)
+                };
+                window[b].l = 1 * new Date;
+                a.async = !0;
+                var d = B();
+                d instanceof z && d.constructor === z && d.TRUSTED_RESOURCE_URL_TYPE_MARKER_GOOG_HTML_SECURITY_PRIVATE_ === A ? d = d.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_ : (v("expected object of type TrustedResourceUrl, got '" + d + "' of type " +
+                    h(d)), d = "type_error:TrustedResourceUrl");
+                a.src = d;
+                c.parentNode.insertBefore(a, c)
+            }
+            p.prototype.enableEventTracking = function() {
+                H(document.body, "click", function(a) {
+                    a = a || window.event;
+                    a = a.target || a.srcElement;
+                    a = 3 == a.nodeType ? a.parentNode : a;
+                    do {
+                        var b = void 0,
+                            c = a,
+                            d = c.getAttribute("data-ga-event");
+                        d ? (b = d, b = b.replace(/\'?\s*,\s*\'?/g, "_SEPARATOR_"), b = b.replace(/(^\'|\'$)/g, ""), b = b.split("_SEPARATOR_"), b = I(b[0], b[1], b[2], b[3])) : this.trackLinks_ && c.nodeName && "a" == c.nodeName.toLowerCase() && (b = I(c.hostname != location.hostname && c.hostname ? "AutoTrack: Outbound Click" : "AutoTrack: Link Click", c.getAttribute("href"),
+                            E));
+                        b && (this.eventActionFilterFn_ && (b.eventAction = this.eventActionFilterFn_(b.eventAction)), this.ga("send", "event", b));
+                        if (a == document.body) break
+                    } while (a = a.parentNode)
+                }, this)
+            };
+            p.prototype.ga = function(a) {
+                window[this.globalName_].apply(window, arguments)
+            };
+
+            function I(a, b, c, d) {
+                var e = {};
+                d && (d = parseFloat(d));
+                if (!a || !b || g(d) && isNaN(d)) return !1;
+                e.eventCategory = a;
+                e.eventAction = b;
+                c && (e.eventLabel = c.toString());
+                d && (e.eventValue = d);
+                return e
+            }
+
+            function H(a, b, c, d) {
+                d && (c = m(c, d));
+                a.addEventListener ? a.addEventListener(b, c, !1) : a.attachEvent && a.attachEvent("on" + b, c)
+            }
+
+            function G(a, b) {
+                b && (a = m(a, b));
+                if (document.addEventListener) try {
+                        H(document, "DOMContentLoaded", a)
+                    } catch (e) {
+                        H(window, "load", a)
+                    } else if (!document.uniqueID && document.expando) var c = document.createElement("tempnode"),
+                        d = window.setInterval(function() {
+                            try {
+                                c.doScroll("left")
+                            } catch (e) {
+                                return
+                            }
+                            window.clearInterval(d);
+                            d = c = null;
+                            a()
+                        }, 50);
+                    else "readyState" in document ? d = window.setInterval(function() {
+                        /loaded|complete/.test(document.readyState) && (window.clearInterval(d), d = null, a())
+                    }, 50) : H(window, "load", a)
+            }
+            n();
+        })();
+
+    </script>
+    <script>
+        if (typeof glue !== "undefined" && glue.tracking.AutoTrack) new glue.tracking.AutoTrack("UA-80673702-1", {});
+
+    </script>
+
+    <link href="/img/assistive-logo-menor.png" rel="shortcut icon" type="image/x-icon">
+    <link href="https://allo.google.com/" rel="canonical">
+    <link href="https://allo.google.com/intl/en-IN_in/" hreflang="en-IN_in" rel="alternate">
+    <meta content="website" property="og:type">
+    <meta content="Google Allo - A smart messaging app" property="og:title">
+    <meta content="Introducing Google Allo, a smart messaging app that helps you say more and do more. Express yourself better with stickers, doodles, and HUGE emojis &amp; text." property="og:description">
+    <meta content="Google Allo" property="og:site_name">
+    <meta content="https://allo.google.com" property="og:url">
+    <meta content="https://allo.google.com/images/allo-share.jpg" property="og:image">
+    <script>
+        // Detect pairing with phone and redirect to /web if present.
+        if (window.localStorage && window.localStorage
+            .getItem('wb_pairing_status') === 'true') {
+            window.location.href = 'https://allo.google.com/web';
+        }
+
+    </script>
+    <style type="text/css">
+        iframe.c3 {
+            display: none;
+            visibility: hidden
+        }
+        
+        div.c2 {
+            background-image: url('./images/hero/hero-mobile.png');
+        }
+        
+        div.c1 {
+            background-image: url('img/background_home.png');
+        }
+
+    </style>
+</head>
+
+<body class="allo locale-code-en" data-ng-app="allo.main">
+    <div class="main-content overview-page" data-ng-controller="MainCtrl as mainCtrl" id="main-content">
+        <header class="product-header cols-row" data-ng-controller="HeaderCtrl as headerCtrl">
+            <h1 class="product-logo">
+                <a href="./">
+                    <span class="google-logo">
+                        <img alt="Logo" src="/img/assistive-logo-menor.png">
+                    </span>
+                    <span class="product-name"><span class="product-brand">&nbsp;aBoard</span></span>
+                </a>
+            </h1>
+            <nav class="menu-list">
+                <ul>
+                    <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'Expression'" href="#" rel="app">App</a></li>
+                    <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'The Google Assistant'" href="#" rel="editor">Editor</a></li>
+                    <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'Security'" href="#" rel="assistive">Assistive</a></li>
+                    <li><a href="tutoriais_v1.html" target="_blank">Tutoriais</a></li>
+                    <li><a href="http://assistive.cin.ufpe.br/en/blog" target="_blank">Blog</a></li>
+                </ul>
+                <div class="sliding-indicator"></div>
+            </nav>
+            <div class="get-product" data-android-download-link="https://play.google.com/store/apps/details?id=com.google.android.apps.fireball&amp;referrer=utm_source%3Dwebsitedownload%26utm_medium%3Dwebsite%26utm_campaign%3Dplaystore_listing&amp;hl=en" data-ga-event="'Referral', 'Referral Click', 'Download CTA'" data-ios-download-link="https://itunes.apple.com/app/id1096801294?pt=9008&amp;ct=site_cta&amp;mt=8" id="header-download-btn">
+                <div class="get-product-text">Acesse</div>
+            </div>
+        </header>
+        <article class="allo-hero hero-section" data-ng-controller="HeroCtrl as heroCtrl">
+            <div class="hero-container">
+                <div class="hero-title-image hide-xs-only c1"></div>
+                <div class="hero-title-image show-xs-only c2"></div>
+                <div class="hero-title-container">
+                    <div class="hero-title-wrapper"><img alt="Allo" class="hero-allo-logo" src="img/assistive-logo.png">
+                        <h2 class="hero-title">aBoard</h2>
+                        <p class="hero-subtitle">Inovando a maneira de comunicar!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="site-width hero-context features-track" id="allo-say-allo">
+                <div class="fab-btn scroll-down-btn show-medium-up">
+                    <div aria-hidden="true" class="material-icons"></div>
+                </div>
+                <div class="cols-row">
+                    <div class="col-5 col-offset-m-2 col-m-8 hero-description">
+                        <p>A plataforma aBoard é união entre app e sistema web. Fruto do projeto de pesquisa ASSISTIVE, o aBoard é voltado para os indivíduos que têm deficiência na comunicação gestual, oral e/ou escrita, sendo possível também utilizá-lo como ferramenta de apoio na educação inclusiva e em terapias, como a PECS.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="features features-track" id="app">
+            <div class="feature-header cols-row site-width">
+                <div class="col-offset-1 col-4 feature-header-image-container">
+                    <picture class="feature-header-image">
+                        <source srcset="img/assistive-logo.png"> <img alt="Add more you to your chats." src="img/assistive-logo.png"></picture>
+                    <div class="feature-header-description col-6">
+                        <h3>Um aplicativo gratuito e simplificado.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section sub-header-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Um aplicativo gratuito e simplificado.</h3>
+                        <p>O aBoard (ou em português “Prancha Assistive”) é um aplicativo de Comunicação Aumentativa e Alternativa (CAA) para tablet cujo diferencial é a sua capacidade de dar sugestões que agilizem a produção de frases com sentido. Fruto do projeto de pesquisa ASSISTIVE, o aBoard é voltado para os indivíduos que têm deficiência na comunicação gestual, oral e/ou escrita, sendo possível também utilizá-lo como ferramenta de apoio na educação inclusiva e em terapias, como a PECS.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-01" data-animation-path="./animations/expression_01.json"><img alt="Respond without typing, in your style." class="fallback-image" src="img/aboard-app.png">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Uso gratuito e ilimitado</h3>
+                        <p>Não é necessário nenhum tipo de pagamento para uso integral de todos os recursos disponíveis.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-02" data-animation-path="./animations/expression_02.json"><img alt="Shout, or whisper it, to get your point across." class="fallback-image" src="img/mockup_app.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Executa em diferentes dispositivos</h3>
+                        <p>As interfaces se adaptam ao tamanho e resolução da tela da maioria dos dispositivos.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-03" data-animation-path="./animations/expression_03.json"><img alt="Turn any photo into a work of art." class="fallback-image" src="img/mockup_app_3.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Respostas rápidas</h3>
+                        <p>Possui um menu para respostas rápidas que não interfere na produção da frase.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-05" data-animation-path="./animations/expression_05.json">
+                        <img alt="Say it all with the perfect sticker." class="fallback-image" src="img/mockup_app_4.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Barra de navegação</h3>
+                        <p>Permite voltar para uma categoria anterior sem ter que ir para a tela inicial.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-03" data-animation-path="./animations/expression_03.json"><img alt="Turn any photo into a work of art." class="fallback-image" src="img/mockup_app_editor.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Sugestões de pictogramas</h3>
+                        <p>Este recurso ajuda a acelerar a produção de frases com sentido.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-02" data-animation-path="./animations/expression_02.json"><img alt="Shout, or whisper it, to get your point across." class="fallback-image" src="img/mockup_app_5.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Vocabulário pronto para teste</h3>
+                        <p>A partir de um vocabulário definido com base em trabalhos científicos sobre comunicação funcional, as ferramentas podem ser usadas imediatamente.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-03" data-animation-path="./animations/expression_03.json"><img alt="Turn any photo into a work of art." class="fallback-image" src="img/mockup_app_3.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Personalização online do vocabulário</h3>
+                        <p>A interface para aumentar, editar ou reduzir o vocabulário é autoexplicativa e pode ser utilizada a partir de um navegador Web com acesso à Internet.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-05" data-animation-path="./animations/expression_05.json">
+                        <img alt="Say it all with the perfect sticker." class="fallback-image" src="img/mockup_app_4.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Organização do vocabulário em categorias</h3>
+                        <p>Este tipo de organização ajuda a desenvolver generalizações de conceitos e permite reduzir o tempo para localizar o que se deseja comunicar.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-03" data-animation-path="./animations/expression_03.json"><img alt="Turn any photo into a work of art." class="fallback-image" src="img/mockup_app_2.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Elementos da frase ou a frase toda</h3>
+                        <p>Permite comunicar e/ou limpar elementos específicos da frase ou a frase toda.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-05" data-animation-path="./animations/expression_05.json">
+                        <img alt="Say it all with the perfect sticker." class="fallback-image" src="img/mockup_app_editor.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Usa os pictogramas do ARASAAC</h3>
+                        <p>Autor dos pictogramas: Sergio Palao. Licença: CC (BY-NC-SA).</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-03" data-animation-path="./animations/expression_03.json"><img alt="Turn any photo into a work of art." class="fallback-image" src="img/mockup_app_5.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="features features-track" id="editor">
+
+            <div class="feature-header cols-row site-width">
+                <div class="col-offset-1 col-4 feature-header-image-container">
+                    <picture class="feature-header-image">
+                        <source srcset="img/assistive-logo.png"> <img alt="Add more you to your chats." src="img/assistive-logo.png"></picture>
+                    <div class="feature-header-description col-6">
+                        <h3>Conheça o aBoard Editor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section sub-header-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Computação em nuvem</h3>
+                        <p>O aBoard Editor é o sistema Web que permite personalizar o vocabulário do aplicativo aBoard. Dentre as funcionalidades desta ferramenta, destaca-se a sua capacidade de indicar sugestões que agilizem a produção de frases com sentido.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-01" data-animation-path="./animations/expression_01.json"><img alt="Respond without typing, in your style." class="fallback-image" src="img/aboard-editor.png">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section" data-ng-controller="FeatureCtrl as featureCtrl">
+                <div class="cols-row site-width">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Feito para cuidadores</h3>
+                        <p>Fruto do projeto de pesquisa ASSISTIVE, o aBoard Editor é 100% gratuito e foi financiado com recursos do governo federal (CNPq e CAPES). Vale ressaltar que, ao contrário do aBoard, o aBoard Editor requer conexão de internet para ser utilizado e é voltado para os familiares e/ou cuidadores (profissionais de saúde e de educação) do indivíduo com deficiência na comunicação.</p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-05" data-animation-path="./animations/expression_05.json">
+                        <img alt="Say it all with the perfect sticker." class="fallback-image" src="img/mockup_editor.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="features features-track" id="assistive">
+            <div class="feature-header cols-row site-width">
+                <div class="feature-header cols-row site-width">
+                    <div class="col-offset-1 col-4 feature-header-image-container">
+                        <picture class="feature-header-image">
+                            <img class="img-personal img-assistive" alt="Add more you to your chats." src="img/assistive.png">
+                        </picture>
+                        <div class="feature-header-description col-6">
+                            <h3>Inovando a maneira de comunicar!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section sub-header-section">
+                <div class="cols-row site-width reverse-row">
+                    <div class="col-4 col-m-5 feature-section-contents">
+                        <h3>Somos uma equipe pequena fazendo coisas grandes!</h3>
+                        <p>O Assistive é um Grupo de Pesquisa que visa desenvolver tecnologias inovadoras em Comunicação Aumentativa e Alternativa (CAA). O Grupo foi fundado em Janeiro de 2014 no Centro de Informática (CIn) da Universidade Federal de Pernambuco (UFPE), faz parte do Centro Nacional de Referência em Tecnologia Assistiva (CNRTA) e recebe financiamento do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).</p>
+                        <p><a href="http://assistive.cin.ufpe.br/en/equipe" target="_blank">Saiba mais</a></p>
+                    </div>
+                    <div class="col-6 col-m-6 animate-container" data-allo-bodymovin="" data-animation-config="featureCtrl.animationConfig" data-animation-name="expression-01" data-animation-path="./animations/expression_01.json"><img alt="Respond without typing, in your style." class="fallback-image" src="img/grupo.jpg">
+                        <div aria-hidden="true" class="animation-holder"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="join-in-section features-track" id="allo-join-in">
+            <div class="site-width">
+                <div class="cols-row">
+                    <div class="col-4 col-offset-m-2 col-m-8 join-in-description">
+                        <h2 class="join-in-title" tabindex="0">Acesse</h2>
+                        <p>Faça o download do aBoard.</p>
+                        <ul aria-label="download buttons" class="download">
+                            <li>
+                                <a class="play-store" data-ga-event="'Referral', 'Referral Click', 'Google Play'" href="https://play.google.com/store/apps/details?id=assistive.aboard&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank"><img alt="Android Download" src="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
+                            </li>
+                            <li>
+                                <a class="ios-app-store" data-ga-event="'Referral', 'Referral Click', 'App Store'" href="#" target="_blank"><img alt="iOS Download" src="https://www.google.com/intl/en/cast/about/static/images/download-badges/ios-download.svg"></a>
+                            </li>
+                        </ul>
+                        <p>É um profissional ajudando alguém com deficiência na comunicação? <a class="allo-desktop-link" href="http://assistive.cin.ufpe.br/aboard/" target="_blank">Acesse agora o <strong>aBoard Editor</strong> em seu navegador</a></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="//www.gstatic.com/external_hosted/lottie/lottie.js"></script>
+    <script src="/js/main.min.js"></script>
+    <script src="//www.gstatic.com/external_hosted/modernizr/v2_8_3/basic.js"></script>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe class="c3" height="0" src="//www.googletagmanager.com/ns.html?id=GTM-P5D5HL" width="0"></iframe>
+    </noscript>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P5D5HL');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</body>
+
+</html>
