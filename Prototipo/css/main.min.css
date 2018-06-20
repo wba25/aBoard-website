@@ -4356,6 +4356,8 @@ body {
 .join-in-section .allo-desktop-link:hover {
     color: #4285F4
 }
+
+/*
 .footer {
     background-color: #f6f6f6
 }
@@ -4470,4 +4472,24 @@ body {
     background-position: left 50%;
     padding-left: .9375rem;
     padding-right: 0
+}
+
+*/
+
+.footer {
+    background-color: #333;
+    padding: 40px 0 0 0;
+    color: #fff;
+    /*
+    margin-bottom: -20px;
+    
+    
+    height: 500px;
+    */
+}
+.footer h3 {
+    color: #fff;
+}
+.footer .footer-copyright {
+    background-color: rgba(0, 0, 0, .1);
 }
