@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    /*background-color: #fffafa;*/
+}
+.bg-light {
+    background-color: #F6F4F2!important;
+}
+a {
+    color: #082CBB;
+}
+.list-group-item {
+    background-color: transparent;
+}
