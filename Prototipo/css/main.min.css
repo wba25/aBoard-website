@@ -224,9 +224,7 @@ img {
 .img-personal {
     max-width: none
 }
-.img-assistive {
-    margin-left: calc(50% - 350px)
-}
+.img-assistive {}
 .h-left {
     float: left
 }
@@ -3724,8 +3722,7 @@ body {
 }
 .product-header .product-logo .google-logo img {
     height: auto;
-    max-width: none;
-    width: 68px
+    max-width: none
 }
 @media all and (min-width:769px) {
     .product-header .product-logo .google-logo img {
@@ -4113,8 +4110,7 @@ body {
 .feature-header .feature-header-image-container .feature-header-image {
     display: inline-block;
     height: auto;
-    padding: 3.75rem 0 1.25rem;
-    width: 5.0625rem
+    padding: 3.75rem 0 1.25rem
 }
 .feature-header .feature-header-image-container .feature-header-description h3 {
     font-family: 'Roboto';

@@ -541,7 +541,7 @@
                 <div class="feature-header cols-row site-width">
                     <div class="col-offset-1 col-4 feature-header-image-container">
                         <picture class="feature-header-image">
-                            <img class="img-personal img-assistive" alt="Add more you to your chats." src="img/assistive.png">
+                            <img class="img-personal img-assistive responsive-img" alt="Add more you to your chats." src="img/assistive.png">
                         </picture>
                         <div class="feature-header-description col-6">
                             <h3>Inovando a maneira de comunicar!</h3>
@@ -611,28 +611,12 @@
                             <a class="grey-text text-lighten-4" href="mailto:assistive@cin.ufpe.br">assistive@cin.ufpe.br</a> &gt;
                         </p>
                     </div>
-                    <div class="col s4">
-                        <h3>Novidades</h3>
-                        <p>
-                            Fique por dentro das nossas novidades, cadastre seu e-mail abaixo.
-                        </p>
-                        <form>
-                            <div class="input-field">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">
-                                Cadastrar
-                            </button>
-                        </form>
-                    </div>
                 </div>
                 <div class="footer-copyright">
                     <div class="container">
-                        2018 © ASSISTIVE. Todos os direitos reservados.
-                        <a href="#" class="grey-text text-lighten-4 right">
-                        aBoard
-                    </a>
+                        <div class="center">
+                            <spam id="year"></spam> © ASSISTIVE
+                        </div>
                     </div>
                 </div>
             </div>
@@ -651,20 +635,7 @@
         <iframe class="c3" height="0" src="//www.googletagmanager.com/ns.html?id=GTM-P5D5HL" width="0"></iframe>
     </noscript>
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-P5D5HL');
+        document.getElementById("year").innerHTML = (new Date()).getFullYear();
 
     </script>
     <!-- End Google Tag Manager -->
