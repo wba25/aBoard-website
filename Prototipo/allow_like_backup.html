@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html class="google no-js" dir="ltr" lang="pt-br">
+<html class="google no-js" dir="ltr" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
     <title>aBoard</title>
     <meta content="Introducing Google Allo, a smart messaging app that helps you say more and do more. Express yourself better with stickers, doodles, and HUGE emojis &amp; text." name="description">
-    <link href="font/css.css" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,200,300,400|Product+Sans:400,300,200&amp;lang=en" rel="stylesheet">
+    <!-- Compiled and minified CSS 
+    <link rel="stylesheet" href="http://cimspe.com/dontcare/wba/css/materialize.min.css"> -->
 
-    <link href="css/icon.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    
-    <!--Sem esse script o menu bugga-->
     <script>
         (function() {
             var docElement = document.documentElement;
@@ -30,7 +28,6 @@
         })();
 
     </script>
-    <!--
     <script>
         (function() {
             var f = this;
@@ -272,12 +269,16 @@
         if (typeof glue !== "undefined" && glue.tracking.AutoTrack) new glue.tracking.AutoTrack("UA-80673702-1", {});
 
     </script>
--->
 
-    <link href="img/assistive-logo-menor.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/assistive-logo-menor.png" rel="shortcut icon" type="image/x-icon">
+    <link href="https://allo.google.com/" rel="canonical">
+    <link href="https://allo.google.com/intl/en-IN_in/" hreflang="en-IN_in" rel="alternate">
     <meta content="website" property="og:type">
-
-    <!--
+    <meta content="Google Allo - A smart messaging app" property="og:title">
+    <meta content="Introducing Google Allo, a smart messaging app that helps you say more and do more. Express yourself better with stickers, doodles, and HUGE emojis &amp; text." property="og:description">
+    <meta content="Google Allo" property="og:site_name">
+    <meta content="https://allo.google.com" property="og:url">
+    <meta content="https://allo.google.com/images/allo-share.jpg" property="og:image">
     <script>
         // Detect pairing with phone and redirect to /web if present.
         if (window.localStorage && window.localStorage
@@ -286,18 +287,16 @@
         }
 
     </script>
-    -->
-
     <style type="text/css">
         iframe.c3 {
             display: none;
             visibility: hidden
         }
-        
+
         div.c2 {
             background-image: url('img/background_home_mobile.png');
         }
-        
+
         div.c1 {
             background-image: url('img/background_home.png');
         }
@@ -309,9 +308,9 @@
     <div class="main-content overview-page" data-ng-controller="MainCtrl as mainCtrl" id="main-content">
         <header class="product-header cols-row" data-ng-controller="HeaderCtrl as headerCtrl">
             <h1 class="product-logo">
-                <a href="#">
+                <a href="./">
                     <span class="google-logo">
-                        <img alt="Logo" src="img/assistive-logo-menor.png">
+                        <img alt="Logo" src="assistive-logo-menor.png">
                     </span>
                     <span class="product-name"><span class="product-brand">&nbsp;aBoard</span></span>
                 </a>
@@ -321,7 +320,7 @@
                     <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'Expression'" href="#" rel="app">App</a></li>
                     <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'The Google Assistant'" href="#" rel="editor">Editor</a></li>
                     <li><a class="menu-anchor-link" data-ga-event="'In page navigation', 'Click', 'Security'" href="#" rel="assistive">Assistive</a></li>
-                    <li><a href="tutoriais.html" target="_blank">Tutoriais</a></li>
+                    <li><a href="tutoriais_v1.html" target="_blank">Tutoriais</a></li>
                     <li><a href="http://assistive.cin.ufpe.br/en/blog" target="_blank">Blog</a></li>
                 </ul>
                 <div class="sliding-indicator"></div>
@@ -623,19 +622,23 @@
             </div>
         </footer>
     </div>
-    <!-- Compiled and minified JavaScript -->
-    <script src="js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript 
+    <script src="http://cimspe.com/dontcare/wba/js/materialize.min.js"></script> -->
 
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-animate.min.js"></script>
-    <script src="js/main.min.js"></script>
-    <!---->
-    <script src="js/lottie.js"></script>
-    <script src="js/basic.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="//www.gstatic.com/external_hosted/lottie/lottie.js"></script>
+    <script src="http://cimspe.com/dontcare/wba/js/main.min.js"></script>
+    <script src="//www.gstatic.com/external_hosted/modernizr/v2_8_3/basic.js"></script>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe class="c3" height="0" src="//www.googletagmanager.com/ns.html?id=GTM-P5D5HL" width="0"></iframe>
+    </noscript>
     <script>
         document.getElementById("year").innerHTML = (new Date()).getFullYear();
+
     </script>
+    <!-- End Google Tag Manager -->
 </body>
 
 </html>
